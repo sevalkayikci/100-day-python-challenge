@@ -1,0 +1,13 @@
+#BMI calculator
+#day 2 exercise
+height = input("enter height: ")
+weight = input("enter weight: ")
+
+weight_int = int(weight)
+height_float = float(height)
+
+bmi = weight_int / (height_float * height_float)
+
+bmi_int = int(bmi)
+
+print(bmi)

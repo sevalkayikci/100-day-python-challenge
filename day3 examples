@@ -1,0 +1,103 @@
+#day3
+
+#example 1
+print("welcome to rollercoaster")
+height = int(input("enter your height: "))
+
+if height > 120:
+    print("you can ride")
+else:
+    print("you can't ride")
+
+#example 2
+number = int(input("enter number to check if it is even or odd: "))
+
+if number % 2 == 1:
+    print("number is odd")
+else:
+    print("number is even")
+    
+#number % 2 == 0 for even
+
+#example 3 elif statements
+
+print("welcome to rollercoaster")
+height = int(input("enter your height: "))
+
+
+if height > 120:
+    print("you can ride")
+    age = int(input("enter your age: "))
+    if age >= 18:
+        print("you will pay 12₺")
+    elif age > 12 and age < 18:
+       print("you will pay 7₺")
+    elif age < 12:
+        print("you will pay 5₺")
+else:
+    print("you can't ride")
+
+          
+#example 3 bmi calculator
+print("BMI calculator")
+
+weight = int(input("enter your weight: "))
+height = float(input("enter your height: "))
+
+bmi = float(round(weight / height ** 2, 1))
+
+if bmi < 18.5:
+    print(f"your BMI is {bmi}, you are underweight.")
+elif bmi < 25:
+    print(f"your BMI is {bmi}, you have normal weight.")
+elif bmi < 30:
+     print(f"your BMI is {bmi}, you are slightly overweight.")
+elif bmi < 35:
+     print(f"your BMI is {bmi}, you are obese.")
+else:
+     print(f"your BMI is {bmi}, you are clinically obese.")
+
+#example 4
+#year leap
+print("leap year")
+year = int(input("enter year: "))
+
+if year % 4 == 0:
+    print("year leap")
+elif year % 100 == 0:
+    print("year not leap")
+elif year % 400 == 0:
+    print("year leap")
+        
+else:
+    print("year not leap")
+ 
+#example 5
+print("welcome to rollercoaster")
+height = int(input("enter your height: "))
+bill = 0
+
+if height > 120:
+    print("you can ride")
+    age = int(input("enter your age: "))
+    
+    if age >= 18:
+        bill = 12
+        print("adult tickets are 12₺")
+        
+    elif 12 < age < 18:  
+        bill = 7
+        print("youth tickets are 7₺")
+       
+    elif age < 12:  
+        bill = 5
+        print("child tickets are 5₺")
+        
+    wants_photos = input("do you want photos? Y or N: ")  
+    if wants_photos.upper() == "Y": 
+        bill += 3
+     
+    print(f"your final bill is {bill}")
+    
+else:
+    print("you can't ride")

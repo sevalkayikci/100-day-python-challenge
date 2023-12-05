@@ -1,0 +1,67 @@
+import random
+
+
+ROCK = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+PAPER = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+SCISSORS = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+
+print("ROCK PAPER SCISSORS GAME")
+
+print("------------------------")
+
+print("0 : ROCK")
+print("1 : PAPER")
+print("2 : SCISSORS")
+
+print("------------------------")
+
+game_images = [ROCK, PAPER, SCISSORS]
+your_choice = int(input("what do you choose? "))
+print(game_images[your_choice])
+computer_choice = random.randint(0, 2)
+
+print(f"COMPUTER CHOICE : {computer_choice} ")
+print(game_images[your_choice])
+
+if your_choice >= 3 or your_choice < 0:
+    print("INVALID, YOU LOSE!")
+    
+elif computer_choice == 2 and your_choice == 0:
+   print("YOU WIN!")
+   
+elif computer_choice == 0 and your_choice == 2:
+   print("YOU LOSE!")
+   
+elif computer_choice > your_choice:
+    print("YOU LOSE!")
+    
+elif your_choice > computer_choice:
+    print("YOU WIN!")
+    
+elif computer_choice == your_choice:
+    print("IT'S A DRAW!")
+    
